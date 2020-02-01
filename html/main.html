@@ -1,28 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Page Title</title>
-  <link type="text/css" rel="stylesheet" href="css/materialize.css">
-  <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
-
-
-
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-  </style>
+    <title>Shopping List</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css">
+    <!--Import personal stylesheet-->
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+    
+    
 </head>
-
 <body>
 
-  <h1>hiiiiiii</h1>
-  <p>A website created by me.</p>
+<!--Nav bar for menu-->
+<nav>0
+    <div class="nav-wrapper">
+      <a class="brand-logo">Shopping List</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a><i class="material-icons">search</i>Search</a></li>
+        <li><a><i class="material-icons">view_module</i>Toggle View</a></li>
+        <li><a><i class="material-icons">clear_all</i>Refresh</a></li>
+        <li><a><i class="material-icons">menu</i>Options</a></li>
+      </ul>
+    </div>
+</nav>
+ 
+<!--Form to add item-->
+<div id="formToAddItem" class="container section row">
+    <form id="additemform" class="col s12">
+        <div class="input-field offset-s2 col s8">
+            <input placeholder="Add an item" type="text" id="item" autofocus>
+        </div>
+    </form>
+</div>
+
+<!--List of items-->
+<div id="shoppinglistdiv" class="container section">
+    <ul id="shoppinglist" class="collection">
+
+        <li class="collection-item" id="listitem:Where" draggable=true>
+            <div class="input-field">
+                <!--<a class="dropdown-trigger prefix material-icons" data-target="list-options">more_vert</a>-->
+                <input onchange="capitalize(event)" value="Where" type="text">
+            </div>
+        </li>
+        
+        <li class="collection-item" id="listitem:There" draggable=true>
+            <div class="input-field">
+                <!--<a class="dropdown-trigger prefix material-icons" data-target="list-options">more_vert</a>-->
+                <input onchange="capitalize(event)" value="There" type="text">
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+<!-- Scripts -->
+
+<!--Import JQuery from Google CDN-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+<!--Import materialize functionality-->
+<script src="js/materialize.js" type="text/javascript"></script>
+<!--Import render.js for webpage functionality-->
+<script src="render.js" type="text/javascript"></script>
 
 </body>
-
 </html>
